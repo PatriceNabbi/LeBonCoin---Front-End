@@ -5,9 +5,10 @@ import axios from "axios";
 import Moment from "react-moment";
 import "moment-timezone";
 import "../assets/Style/Offers.css";
+import SearchBar from "../components/SearchBar";
 // import Annunces from "../components/Annunces";
 
-function Offers() {
+function Offers({ search, setSearch }) {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +27,11 @@ function Offers() {
 
   return (
     <div>
+      <menu>
+        <div className="search-menu">
+          <SearchBar search={search} setSearch={setSearch} />
+        </div>
+      </menu>
       {isLoading === true ? (
         <p>En cours de chargement...</p>
       ) : (

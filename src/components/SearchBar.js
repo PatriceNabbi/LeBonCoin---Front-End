@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../assets/Style/SearchBar.css";
 
-function SearchBar({ name, setName }) {
+function SearchBar({ search, setSearch }) {
   return (
     <div className="search">
       <div
@@ -15,9 +15,9 @@ function SearchBar({ name, setName }) {
           style={{ marginRight: 30 }}
           type="text"
           placeholder="Que recherchez-vous"
-          value={name}
+          value={search}
           onChange={event => {
-            setName(event.target.value);
+            setSearch(event.target.value);
           }}
         ></input>
         <div className="search-validate">

@@ -6,8 +6,6 @@ import Moment from "react-moment";
 import "moment-timezone";
 import "../assets/Style/Offer.css";
 
-// axios.get("https://leboncoin-api.herokuapp.com/api/offer/with-count" + { id });
-
 function Offer() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
