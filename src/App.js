@@ -16,28 +16,29 @@ function App() {
 
   return (
     <div>
-      <header className="topbar">
-        <div className="wrapper">
-          <img src={Logo} alt="Le bon coin" />
-          <ul>
-            <li style={{ width: 400 }}>
-              <button>+</button>
-              <span>Déposer une annonce</span>
-            </li>
-            <li>{/* <FontAwesomeIcon icon="search" /> */} Recherche</li>
-            <div className="connection">
-              <span> se connecter</span>
-            </div>
-          </ul>
-        </div>
-      </header>
-      <menu>
-        <div className="search-menu">
-          <SearchBar name={name} setName={setName} />
-        </div>
-      </menu>
-      <div className="orange-ruban"></div>
       <Router>
+        <header className="topbar">
+          <div className="wrapper">
+            <img src={Logo} alt="Le bon coin" />
+            <ul>
+              <li style={{ width: 400 }}>
+                <button>+</button>
+                <span>Déposer une annonce</span>
+              </li>
+              <li>{/* <FontAwesomeIcon icon="search" /> */} Recherche</li>
+              <div className="connection">
+                <span> se connecter</span>
+              </div>
+            </ul>
+          </div>
+        </header>
+        <menu>
+          <div className="search-menu">
+            <SearchBar name={name} setName={setName} />
+          </div>
+        </menu>
+        <div className="orange-ruban"></div>
+
         <Switch>
           <Route path="/offers/:id">
             {/* Création de la page d'offres qui sera la page "Offer" --> les pages doivent toujours être organisés avec le sommet le plus micro qui redescend vers le plus macro */}

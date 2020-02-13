@@ -32,7 +32,7 @@ function Offers() {
         <div>
           {data.offers.map((annunce, index) => {
             return (
-              <Link to="/offers/_id">
+              <Link key={annunce._id} to={"/offers/" + annunce._id}>
                 <div className="annunces-global">
                   <div className="annunces-organization">
                     <div className="annunces-picture-wrapper">
