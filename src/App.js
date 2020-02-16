@@ -17,8 +17,12 @@ import LogIn from "./containers/LogIn";
 import SignUp from "./containers/SignUp";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faUserAlt } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch, faUserAlt);
+import {
+  faSearch,
+  faUserAlt,
+  faClock
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faUserAlt, faClock);
 
 function App() {
   //Récupération via Cookie.set du token enregistré dans le container LogIn qu'on enfermera dans une variable "tokenFromCookie"
@@ -48,7 +52,7 @@ function App() {
         </Route>
         <Route path="/sign_up">
           {/* Création de la page de connexion qui sera la page "Sign_Up" --> container : SignUp*/}
-          <SignUp />
+          <SignUp setUser={setUser} />
         </Route>
 
         <Route path="/log_in">
