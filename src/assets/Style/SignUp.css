@@ -1,0 +1,118 @@
+.create-a-new-account {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 240px;
+  margin-right: 320px;
+}
+
+.create-an-account-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  width: 380px;
+}
+
+.why-create-an-account {
+  display: flex;
+  flex-direction: column;
+  margin-left: -100px;
+}
+
+aside .why-create-an-account li {
+}
+ul {
+  width: 380px;
+}
+
+.password-zone {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 13.5px;
+  line-height: 15px;
+  text-align: left;
+}
+
+hr {
+  width: 100%;
+  border: solid 1px orange;
+  margin-bottom: 40px;
+}
+
+.icon-clock {
+  font-size: 36px;
+  color: rgb(80, 145, 199);
+}
+
+.icon-bell {
+  font-size: 36px;
+  color: rgb(80, 145, 199);
+}
+
+.icon-eye {
+  font-size: 36px;
+  color: rgb(80, 145, 199);
+}
+
+p {
+  display: flex;
+  /* align-items: center;
+    justify-content: space-between; */
+  width: 100%;
+  text-align: justify;
+  margin-left: 60px;
+}
+
+.clock {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 45px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+}
+
+.bell {
+  display: flex;
+  justify-content: space-between;
+  width: 71%;
+  margin-top: 57px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+}
+
+.eye {
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+  margin-top: 57px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+}
+
+.accept {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin-bottom: 32px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  line-height: 154.9%;
+}
+
+.personal-account {
+  margin-top: 20px;
+}

@@ -21,7 +21,7 @@ function LogIn({ setUser }) {
             onSubmit={async event => {
               event.preventDefault();
 
-              if (email || password === "") {
+              if (email === "" || password === "") {
                 alert("informations missing");
               } else
                 try {
@@ -32,6 +32,8 @@ function LogIn({ setUser }) {
                       password
                     }
                   );
+                  console.log(email);
+                  console.log(password);
 
                   if (response.data.token) {
                     // 4. Appeler le serveur pour transmettre un email et un mdp afin d'obtenir un token. Sauvergarder le token et mettre la donnée dans une variable.

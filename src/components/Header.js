@@ -14,16 +14,24 @@ function Header({ user, setUser }) {
           <img src={Logo} alt="Le bon coin" />
         </Link>
         <ul>
-          <li style={{ width: 400 }}>
-            <button>+</button>
-            <span>Déposer une annonce</span>{" "}
-            {/* englober avec deux balises Link + créer les routes */}
-          </li>
+          <div className="post-your-annunce">
+            <li>
+              <button>
+                <FontAwesomeIcon
+                  icon={["far", "plus-square"]}
+                  className="plus-square"
+                />{" "}
+                <Link to="/publish">Déposer une annonce</Link>
+              </button>
+              {/* englober avec deux balises Link + créer les routes */}
+            </li>
+          </div>
+
           <li>
-            <FontAwesomeIcon icon="search" /> Recherche
+            <FontAwesomeIcon icon={["fas", "search"]} /> Recherche
           </li>
           <div className="connection">
-            <FontAwesomeIcon icon="user-alt" style={{ fontSize: 16 }} />
+            <FontAwesomeIcon icon={["far", "user"]} style={{ fontSize: 16 }} />
             {user === null ? (
               <Link to="/log_in">Se connecter</Link>
             ) : (

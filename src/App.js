@@ -11,18 +11,21 @@ import {
 import Header from "./components/Header";
 import Offer from "./containers/Offer";
 import Offers from "./containers/Offers";
+import Publish from "./containers/Publish";
 import "./assets/Style/App.css";
-import SearchBar from "./components/SearchBar";
 import LogIn from "./containers/LogIn";
 import SignUp from "./containers/SignUp";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
-  faSearch,
-  faUserAlt,
-  faClock
-} from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch, faUserAlt, faClock);
+  faUser,
+  faClock,
+  faBell,
+  faEye,
+  faPlusSquare
+} from "@fortawesome/free-regular-svg-icons";
+library.add(faSearch, faUser, faClock, faBell, faEye, faPlusSquare);
 
 function App() {
   //Récupération via Cookie.set du token enregistré dans le container LogIn qu'on enfermera dans une variable "tokenFromCookie"
@@ -37,6 +40,10 @@ function App() {
   }
 
   const [user, setUser] = useState(tokenState);
+  const [title, setTitle] = useState({});
+  const [text, setText] = useState({});
+  const [price, setPrice] = useState({});
+  const [file, setFile] = useState({});
 
   return (
     <Router>
@@ -44,6 +51,21 @@ function App() {
 
       <div className="orange-ruban"></div>
       <Switch>
+        <Route path="/publish">
+          {/* Création de la page d'offres qui sera la page "Offer" --> les pages doivent toujours être organisés avec le sommet le plus micro qui redescend vers le plus macro */}
+          <div>
+            <Publish
+              title={title}
+              setTitle={setTitle}
+              text={text}
+              setText={setText}
+              price={price}
+              setPrice={setPrice}
+              file={file}
+              setFile={setFile}
+            />
+          </div>
+        </Route>
         <Route path="/offers/:id">
           {/* Création de la page d'offres qui sera la page "Offer" --> les pages doivent toujours être organisés avec le sommet le plus micro qui redescend vers le plus macro */}
           <div>

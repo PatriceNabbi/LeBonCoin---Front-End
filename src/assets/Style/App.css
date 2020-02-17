@@ -96,3 +96,32 @@ header {
   cursor: pointer;
   font-size: 14px;
 }
+
+.post-your-annunce {
+  display: flex;
+  align-items: center;
+  background-color: coral;
+  width: 360px;
+  margin-right: 200px;
+  height: 40px;
+  border: solid coral;
+  border-radius: 5px;
+}
+
+.post-your-annunce button {
+  border: none;
+  outline: none;
+  background-color: coral;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 6px;
+}
+
+.post-your-annunce span {
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 19px;
+  font-family: "Roboto", sans-serif;
+}
