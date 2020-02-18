@@ -18,8 +18,9 @@
   text-decoration: none;
 }
 .annunces-organization img {
-  height: 100%;
+  max-height: 100%;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .annunces-details {
@@ -64,4 +65,8 @@
 .annunce-created {
   height: 66px;
   width: 142px;
+}
+
+.annunces-center {
+  margin-left: 16.9%;
 }

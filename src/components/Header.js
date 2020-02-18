@@ -7,8 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header({ user, setUser }) {
   const history = useHistory();
+  const tokenFromCookie = Cookies.get("userToken");
   return (
-    <header className="topbar">
+    <header>
       <div className="wrapper">
         <Link to="/">
           <img src={Logo} alt="Le bon coin" />
@@ -16,12 +17,19 @@ function Header({ user, setUser }) {
         <ul>
           <div className="post-your-annunce">
             <li>
-              <button>
-                <FontAwesomeIcon
-                  icon={["far", "plus-square"]}
-                  className="plus-square"
-                />{" "}
-                <Link to="/publish">Déposer une annonce</Link>
+              <button
+                onClick={() => {
+                  console.log(tokenFromCookie);
+                  // Gestion du post d'annonce si l'utilisateur n'a pas de compte ou n'est pas connecté
+                  // 1. Check si un cookie existe
+                  if (user === null) {
+                    // 3. Aller sur la page d'accueil
+                    history.push("/log_in");
+                  } else history.push("/publish");
+                }}
+              >
+                <FontAwesomeIcon icon={["far", "plus-square"]} /> Déposer une
+                annonce
               </button>
               {/* englober avec deux balises Link + créer les routes */}
             </li>

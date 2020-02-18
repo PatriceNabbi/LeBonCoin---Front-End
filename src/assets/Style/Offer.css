@@ -13,10 +13,12 @@
   flex-direction: column;
   height: 600px;
   width: 607px;
-  border: solid 1px;
   box-shadow: 0px 2px 5px silver;
   background: #ffffff;
   padding-bottom: 40px;
+
+  margin-left: 400px;
+  margin-top: 60px;
 }
 .offer-picture-wrapper {
   display: flex;
@@ -27,7 +29,7 @@
 .offer-picture-wrapper > img {
   object-fit: contain;
   width: 607px;
-  height: 500px;
+  max-height: 500px;
 }
 
 .offer-complete-description {
@@ -36,6 +38,16 @@
   padding-top: 30px;
   height: 110px;
   width: 607px;
+  margin-left: 400px;
+}
+
+.offer-complete-description p {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  height: 110px;
+  width: 607px;
+  margin-left: 0px;
 }
 
 .offer-descrip {
@@ -43,7 +55,6 @@
   line-height: 140%;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .offer-title {
@@ -65,12 +76,58 @@
   padding-top: 40px;
   padding-left: 10px;
 }
-.offer-description {
-}
-
 .offer-title-price-and-desc {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
   justify-content: space-between;
+}
+.global-offer-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.annuncer {
+  margin-right: 250px;
+  margin-top: 100px;
+  background-color: #ffffff;
+  width: 279px;
+  height: 165px;
+  margin-left: 50px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.annuncer div {
+  font-size: 18px;
+  line-height: 140%;
+  font-family: "Roboto", sans-serif;
+  margin-left: -120px;
+}
+
+.annuncer p {
+  margin-right: 250px;
+  width: 160px;
+  height: 10px;
+  margin: auto;
+  margin-top: 20px;
+  color: #4183d7;
+  font-size: 15px;
+  line-height: 140%;
+  font-family: "Roboto", sans-serif;
+}
+
+.annuncer button {
+  margin-right: 250px;
+  background-color: #f56b2a;
+  width: 160px;
+  height: 44px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 60px;
+  color: white;
+  outline: none;
+  text-decoration: inherit;
+  cursor: pointer;
 }

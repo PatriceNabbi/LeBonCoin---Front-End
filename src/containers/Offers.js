@@ -26,7 +26,7 @@ function Offers({ search, setSearch }) {
   //   console.log(data);
 
   return (
-    <div>
+    <div className="orange-ruban">
       <menu>
         <div className="search-menu">
           <SearchBar search={search} setSearch={setSearch} />
@@ -35,10 +35,10 @@ function Offers({ search, setSearch }) {
       {isLoading === true ? (
         <p>En cours de chargement...</p>
       ) : (
-        <div>
+        <div className="annunces-center">
           {data.offers.map((annunce, index) => {
             return (
-              <Link key={annunce._id} to={"/offers/" + annunce._id}>
+              <Link key={annunce._id} to={"/offer/" + annunce._id}>
                 <div className="annunces-global">
                   <div className="annunces-organization">
                     <div className="annunces-picture-wrapper">
