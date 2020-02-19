@@ -69,7 +69,13 @@ function Offer({ user }) {
                 if (user === null) {
                   // 3. Aller sur la page d'accueil
                   history.push("/log_in");
-                } else history.push("/pay");
+                } else
+                  history.push(
+                    "/payment",
+                    { picture: data.picture[0] },
+                    { title: data.title },
+                    { price: data.price }
+                  );
               }}
             >
               <FontAwesomeIcon
